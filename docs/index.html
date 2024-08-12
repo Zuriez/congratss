@@ -4,15 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Congratulations!</title>
-   <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="questionnaire">
+        <h1>Welcome!</h1>
+        <p>Hi John!</p>
+        <input type="text" id="nameInput" placeholder="Type your name" />
+        <button onclick="askSecondQuestion()">Next</button>
+    </div>
+
+    <div class="container" id="surprise" style="display: none;">
+        <h1>Are you excited for the surprise?</h1>
+        <button onclick="handleAnswer(true)">Yes</button>
+        <button onclick="handleAnswer(false)">No</button>
+    </div>
+
+    <div class="container" id="message" style="display: none;">
         <h1>Congratulations on Your First Job!</h1>
         <p>Wishing you a fantastic first day after training!</p>
         <p>Here's to your success and a bright future ahead!</p>
         <div id="hearts"></div>
     </div>
-   <script src="./script.js"></script>
+
+    <div class="container" id="goodbye" style="display: none;">
+        <h1>Ok, bye then, asshole!</h1>
+    </div>
+
+    <script src="./script.js"></script>
 </body>
 </html>
+
