@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", function() {
         heart.style.left = Math.random() * 100 + "%";
         heart.style.top = Math.random() * 100 + "%";
         heart.style.opacity = 0;
+        heart.style.transform = `scale(${Math.random() * 1.5 + 0.5})`;
+        heart.style.color = `hsl(${Math.random() * 360}, 70%, 70%)`;
         document.body.appendChild(heart);
         return heart;
     }
@@ -20,13 +22,27 @@ document.addEventListener("DOMContentLoaded", function() {
                 { opacity: 1, transform: 'translateY(-100px)' },
                 { opacity: 0, transform: 'translateY(-200px)' }
             ], {
-                duration: 2000,
+                duration: 3000,
                 iterations: 1,
-                easing: 'ease-in'
+                easing: 'ease-in-out'
             });
-            setTimeout(() => heart.remove(), 2000);
+            setTimeout(() => heart.remove(), 3000);
         }
     }
 
     setInterval(animateHearts, 1000);
 });
+
+function askSecondQuestion() {
+    document.getElementById('questionnaire').style.display = 'none';
+    document.getElementById('surprise').style.display = 'block';
+}
+
+function handleAnswer(isExcited) {
+    document.getElementById('surprise').style.display = 'none';
+    if (isExcited) {
+        document.getElementById('message').style.display = 'block';
+    } else {
+        document.getElementById('goodbye').style.display = 'block';
+    }
+}
