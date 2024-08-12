@@ -14,6 +14,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 50px auto;
     max-width: 600px;
+    animation: fadeIn 1s ease-in-out;
 }
 
 h1 {
@@ -28,6 +29,22 @@ p {
     color: #264653;
     margin-bottom: 20px;
     animation: fadeIn 2s ease-in-out;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #2a9d8f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #21867a;
 }
 
 #hearts {
