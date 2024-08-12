@@ -35,6 +35,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function askSecondQuestion() {
     document.getElementById('questionnaire').style.display = 'none';
+    document.getElementById('questionTwo').style.display = 'block';
+}
+
+function handleSecondAnswer(isYes) {
+    document.getElementById('questionTwo').style.display = 'none';
+    if (isYes) {
+        document.getElementById('surprise').style.display = 'block';
+    } else {
+        document.getElementById('noChoice').style.display = 'block';
+    }
+}
+
+function askThirdQuestion() {
+    document.getElementById('noChoice').style.display = 'none';
     document.getElementById('surprise').style.display = 'block';
 }
 
